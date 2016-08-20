@@ -382,7 +382,7 @@ function mn_steemit_settings_page() {
 
                 <tr>
                     <td>postdate</td>
-                    <td><?php _e("Sort post date (true or false).", 'steemit-feed'); ?></td>
+                    <td><?php _e("Show post date (true or false).", 'steemit-feed'); ?></td>
                     <td><code>[steemit-feed postdate="true"]</code></td>
                 </tr>
                 <tr>
