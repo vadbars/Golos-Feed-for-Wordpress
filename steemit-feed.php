@@ -125,8 +125,7 @@ function display_steemit($atts, $content = null) {
 								'atts'		: encodeURIComponent(encoded_atts)
 							};
 					
-							jQuery.post(mn_sf_ajaxurl, data, function(msg) {							
-								console.log(msg);
+							jQuery.post(mn_sf_ajaxurl, data, function(msg) {
 								$('.steem-feed-'+mn_sf_id+'').html(msg);
 							});
 													
