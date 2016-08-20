@@ -145,6 +145,7 @@ function display_steemit($atts, $content = null) {
 
 // Function that handles ajax request (wp_ajax_*action*)
 add_action( 'wp_ajax_render_steem_feed', 'mn_render_steem_feed' );
+add_action( 'wp_ajax_nopriv_render_steem_feed', 'mn_render_steem_feed' );
 
 function mn_render_steem_feed() {
 	
