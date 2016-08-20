@@ -1,7 +1,7 @@
 <?php 
 /*
 Plugin Name: Steemit Feed
-Plugin URI: https://www.steemit.com/@wordpress-tips/
+Plugin URI: https://steemit.com/steemit/@wordpress-tips/steemit-for-wordpress-1-display-your-steemit-blog-in-your-wordpress-website-with-this-free-plugin
 Description: A simple Wordpress plugin that displays a feed of your Steemit posts.
 Version: 1.0.1
 Author: Minitek.gr
