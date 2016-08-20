@@ -414,7 +414,7 @@ function mn_steemit_settings_page() {
     <?php if( $sfi_active_tab == 'support' ) { //Start Support tab ?>
 
         <h3><?php _e('Setting up and Customizing the plugin', 'steemit-feed'); ?></h3>
-        <p><i class="fa fa-life-ring" aria-hidden="true"></i>&nbsp; <?php _e('<a href="https://steemit.com/@wordpress-tips/" target="_blank">Click here for setup instructions</a>', 'steemit-feed'); ?></p>
+        <p><i class="fa fa-life-ring" aria-hidden="true"></i>&nbsp; <?php _e('<a href="https://steemit.com/steemit/@wordpress-tips/steemit-for-wordpress-1-display-your-steemit-blog-in-your-wordpress-website-with-this-free-plugin" target="_blank">Click here for setup instructions</a>', 'steemit-feed'); ?></p>
         
 	<?php } //End Support tab ?>
 	
@@ -426,7 +426,7 @@ function mn_steemit_settings_page() {
         <h3><?php _e('Like the plugin? Help spread the word!'); ?></h3>
 
         <!-- TWITTER -->
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://steemit.com/@wordpress-tips/" data-text="A simple Wordpress plugin that displays a feed of your Steemit posts." data-via="Minitek_gr" data-dnt="true">Tweet</a>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://steemit.com/steemit/@wordpress-tips/steemit-for-wordpress-1-display-your-steemit-blog-in-your-wordpress-website-with-this-free-plugin" data-text="A simple Wordpress plugin that displays a feed of your Steemit posts." data-via="Minitek_gr" data-dnt="true">Tweet</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         <style type="text/css">
         #twitter-widget-0{ float: left; width: 100px !important; }
@@ -442,7 +442,7 @@ function mn_steemit_settings_page() {
           js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1684364011793192&version=v2.7";
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
-        <div class="fb-like" data-href="https://steemit.com/@wordpress-tips/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true" style="display: block; float: left; margin-right: 20px;"></div>
+        <div class="fb-like" data-href="https://steemit.com/steemit/@wordpress-tips/steemit-for-wordpress-1-display-your-steemit-blog-in-your-wordpress-website-with-this-free-plugin" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true" style="display: block; float: left; margin-right: 20px;"></div>
 
     </div>
 
