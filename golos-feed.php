@@ -1,15 +1,15 @@
 <?php 
 /*
-Plugin Name: Steemit Feed
-Plugin URI: https://steemit.com/steemit/@wordpress-tips/steemit-for-wordpress-1-display-your-steemit-blog-in-your-wordpress-website-with-this-free-plugin
-Description: A simple Wordpress plugin that displays a feed of your Steemit posts.
-Version: 1.0.1
-Author: Minitek.gr
-Author URI: https://www.minitek.gr/
+Plugin Name: Golos Feed
+#Plugin URI: https://golos.com/golos/@wordpress-tips/golos-for-wordpress-1-display-your-golos-blog-in-your-wordpress-website-with-this-free-plugin
+Description: A simple Wordpress plugin that displays a feed of your Golos posts.
+Version: 0.1
+Author: Vadbars
+Author URI: https://vadbars.ru/
 License: GPLv3 or later
-Text Domain: steemit-feed
+Text Domain: golos-feed
 
-Copyright 2011 - 2016  Minitek.gr.
+Copyright 2017  vadbars.
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 3 of the License, or
@@ -27,77 +27,77 @@ define( 'MNSFVER', '1.0.1' );
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 //Include admin
-include dirname( __FILE__ ) .'/steemit-feed-admin.php';
+include dirname( __FILE__ ) .'/golos-feed-admin.php';
 
 // Add shortcodes
-add_shortcode('steemit-feed', 'display_steemit');
+add_shortcode('golos-feed', 'display_golos');
 
-function display_steemit($atts, $content = null) {
+function display_golos($atts, $content = null) {
 	
 	STATIC $i = 0;
 	$i++;
 	
     /******************* SHORTCODE OPTIONS ********************/
 
-    $options = get_option('mn_steemit_settings');
+    $options = get_option('mn_golos_settings');
     
     //Pass in shortcode attributes
     $atts = shortcode_atts(
     array(
-        'username' => isset($options[ 'mn_steemit_username' ]) ? $options[ 'mn_steemit_username' ] : '',
-		'ajaxtheme' => isset($options[ 'mn_steemit_ajax_theme' ]) ? $options[ 'mn_steemit_ajax_theme' ] : '',
-		'postscount' => isset($options[ 'mn_steemit_posts_count' ]) ? $options[ 'mn_steemit_posts_count' ] : '',
-		'postimage' => isset($options[ 'mn_steemit_post_image' ]) ? $options[ 'mn_steemit_post_image' ] : '',
-        'posttitle' => isset($options[ 'mn_steemit_post_title' ]) ? $options[ 'mn_steemit_post_title' ] : '',
-        'postcontent' => isset($options[ 'mn_steemit_post_content' ]) ? $options[ 'mn_steemit_post_content' ] : '',
-        'wordlimit' => isset($options[ 'mn_steemit_word_limit' ]) ? $options[ 'mn_steemit_word_limit' ] : '',
-        'postreward' => isset($options[ 'mn_steemit_post_reward' ]) ? $options[ 'mn_steemit_post_reward' ] : '',
-        'postdate' => isset($options[ 'mn_steemit_post_date' ]) ? $options[ 'mn_steemit_post_date' ] : '',
-        'postauthor' => isset($options[ 'mn_steemit_post_author' ]) ? $options[ 'mn_steemit_post_author' ] : '',
-        'posttag' => isset($options[ 'mn_steemit_post_tag' ]) ? $options[ 'mn_steemit_post_tag' ] : '',
-        'postvotes' => isset($options[ 'mn_steemit_post_votes' ]) ? $options[ 'mn_steemit_post_votes' ] : '',
-        'postreplies' => isset($options[ 'mn_steemit_post_replies' ]) ? $options[ 'mn_steemit_post_replies' ] : ''
+        'username' => isset($options[ 'mn_golos_username' ]) ? $options[ 'mn_golos_username' ] : '',
+		'ajaxtheme' => isset($options[ 'mn_golos_ajax_theme' ]) ? $options[ 'mn_golos_ajax_theme' ] : '',
+		'postscount' => isset($options[ 'mn_golos_posts_count' ]) ? $options[ 'mn_golos_posts_count' ] : '',
+		'postimage' => isset($options[ 'mn_golos_post_image' ]) ? $options[ 'mn_golos_post_image' ] : '',
+        'posttitle' => isset($options[ 'mn_golos_post_title' ]) ? $options[ 'mn_golos_post_title' ] : '',
+        'postcontent' => isset($options[ 'mn_golos_post_content' ]) ? $options[ 'mn_golos_post_content' ] : '',
+        'wordlimit' => isset($options[ 'mn_golos_word_limit' ]) ? $options[ 'mn_golos_word_limit' ] : '',
+        'postreward' => isset($options[ 'mn_golos_post_reward' ]) ? $options[ 'mn_golos_post_reward' ] : '',
+        'postdate' => isset($options[ 'mn_golos_post_date' ]) ? $options[ 'mn_golos_post_date' ] : '',
+        'postauthor' => isset($options[ 'mn_golos_post_author' ]) ? $options[ 'mn_golos_post_author' ] : '',
+        'posttag' => isset($options[ 'mn_golos_post_tag' ]) ? $options[ 'mn_golos_post_tag' ] : '',
+        'postvotes' => isset($options[ 'mn_golos_post_votes' ]) ? $options[ 'mn_golos_post_votes' ] : '',
+        'postreplies' => isset($options[ 'mn_golos_post_replies' ]) ? $options[ 'mn_golos_post_replies' ] : ''
     ), $atts);
 
     /******************* VARS ********************/
 
     //General
-    $mn_steemit_username = trim($atts['username']);
+    $mn_golos_username = trim($atts['username']);
 
     //Post Settings
-	$mn_steemit_posts_count = $atts['postscount'];
+	$mn_golos_posts_count = $atts['postscount'];
 
     //Ajax theme
-    $mn_steemit_ajax_theme = $atts['ajaxtheme'];
-    ( $mn_steemit_ajax_theme == 'on' || $mn_steemit_ajax_theme == 'true' || $mn_steemit_ajax_theme == true ) ? $mn_steemit_ajax_theme = true : $mn_steemit_ajax_theme = false;
+    $mn_golos_ajax_theme = $atts['ajaxtheme'];
+    ( $mn_golos_ajax_theme == 'on' || $mn_golos_ajax_theme == 'true' || $mn_golos_ajax_theme == true ) ? $mn_golos_ajax_theme = true : $mn_golos_ajax_theme = false;
 
     /******************* CONTENT ********************/
 
-    $mn_steemit_content = '<div id="mn_steem_feed" class="sfi">';
+    $mn_golos_content = '<div id="mn_steem_feed" class="sfi">';
 
     //Error messages
-    $mn_steemit_error = false;
-    if( empty($mn_steemit_username) || !isset($mn_steemit_username) ){
-        $mn_steemit_content .= '<div class="mn_steem_feed_error"><p>'.__('Please enter a username on the Steemit Feed plugin Settings page', 'steemit-feed' ).'</p></div>';
-        $mn_steemit_error = true;
+    $mn_golos_error = false;
+    if( empty($mn_golos_username) || !isset($mn_golos_username) ){
+        $mn_golos_content .= '<div class="mn_steem_feed_error"><p>'.__('Please enter a username on the golos Feed plugin Settings page', 'golos-feed' ).'</p></div>';
+        $mn_golos_error = true;
     }
     
-    $mn_steemit_content .= '</div>'; //End #mn_steemit
+    $mn_golos_content .= '</div>'; //End #mn_golos
 	 	
 	 //If using an ajax theme then add the JS to the bottom of the feed
-    if($mn_steemit_ajax_theme){
-        $mn_steemit_content .= "<script type='text/javascript' src='".plugins_url( '/js/steem.min.js?ver='.MNSFVER , __FILE__ )."'></script>";
+    if($mn_golos_ajax_theme){
+        $mn_golos_content .= "<script type='text/javascript' src='".plugins_url( '/js/steem.min.js?ver='.MNSFVER , __FILE__ )."'></script>";
     }
 	
 	// Add script
-	if( isset($mn_steemit_username) && $mn_steemit_username )
+	if( isset($mn_golos_username) && $mn_golos_username )
 	{
-		// Steemit feed
-		$mn_steemit_content .= '<div class="steem-feed-'.$i.'"><div class="steem-feed-loader"><i class="fa fa-refresh fa-spin"></i></div></div>';
+		// golos feed
+		$mn_golos_content .= '<div class="steem-feed-'.$i.'"><div class="steem-feed-loader"><i class="fa fa-refresh fa-spin"></i></div></div>';
 
-		$mn_sf_author = $mn_steemit_username;
+		$mn_sf_author = $mn_golos_username;
 		$mn_sf_datenow = current_time( 'Y-m-d\TH:i:s' );
-		$mn_sf_limit = (int)$mn_steemit_posts_count;	
+		$mn_sf_limit = (int)$mn_golos_posts_count;	
 		$mn_sf_ajaxurl = admin_url( 'admin-ajax.php' );
 		$encoded_atts = json_encode($atts);
 	
@@ -136,11 +136,11 @@ function display_steemit($atts, $content = null) {
 		</script>
 		";
 	
-		$mn_steemit_content .= $js;	
+		$mn_golos_content .= $js;	
 	}
 	 
     //Return our feed HTML to display
-    return $mn_steemit_content;
+    return $mn_golos_content;
 }
 
 // Function that handles ajax request (wp_ajax_*action*)
@@ -180,7 +180,7 @@ function mn_render_steem_feed() {
 								$image = $metadata->image;
 								if (array_key_exists('0', $image))
 								{
-									$html .= '<a href="https://steemit.com'.$item->url.'" class="sf-image" target="_blank"><img src="https://img1.steemit.com/128x256/'.$image[0].'" alt="'.$item->title.'" /></a>';
+									$html .= '<a href="https://golos.com'.$item->url.'" class="sf-image" target="_blank"><img src="https://img1.golos.com/128x256/'.$image[0].'" alt="'.$item->title.'" /></a>';
 								}
 							}
 						}
@@ -190,7 +190,7 @@ function mn_render_steem_feed() {
 							// Title
 							if ($atts['posttitle'] === 1 || $atts['posttitle'] === '1' || $atts['posttitle'] === true || $atts['posttitle'] === 'true')
 							{
-								$html .= '<a class="sf-li-title" href="https://steemit.com'.$item->url.'" target="_blank">'.$item->title.'</a>';
+								$html .= '<a class="sf-li-title" href="https://golos.com'.$item->url.'" target="_blank">'.$item->title.'</a>';
 							}
 							
 							// Body
@@ -240,7 +240,7 @@ function mn_render_steem_feed() {
 											if ($atts['postauthor'] === 1 || $atts['postauthor'] === '1' || $atts['postauthor'] === true || $atts['postauthor'] === 'true')
 											{
 												$html .= '<span class="sf-li-author">'; 
-													$html .= ' '.__('by', 'steemit-feed' ).' <a href="https://steemit.com/@'.$item->author.'" target="_blank">'.$item->author.'</a>';
+													$html .= ' '.__('by', 'golos-feed' ).' <a href="https://golos.com/@'.$item->author.'" target="_blank">'.$item->author.'</a>';
 													//$html .= '<span class="sf-li-rep"></span>';
 												$html .= '</span>';
 											}
@@ -248,7 +248,7 @@ function mn_render_steem_feed() {
 											// Tags
 											if ($atts['posttag'] === 1 || $atts['posttag'] === '1' || $atts['posttag'] === true || $atts['posttag'] === 'true')
 											{
-												$html .= ' '.__('in', 'steemit-feed' ).' <a href="https://steemit.com/trending/'.$metadata->tags[0].'" target="_blank">'.$metadata->tags[0].'</a>';
+												$html .= ' '.__('in', 'golos-feed' ).' <a href="https://golos.com/trending/'.$metadata->tags[0].'" target="_blank">'.$metadata->tags[0].'</a>';
 											}
 										
 										$html .= '</span>';
@@ -267,7 +267,7 @@ function mn_render_steem_feed() {
 									if ($atts['postreplies'] === 1 || $atts['postreplies'] === '1' || $atts['postreplies'] === true || $atts['postreplies'] === 'true')
 									{
 										$html .= '<span class="sf-li-replies">';
-											$html .= '<a href="https://steemit.com'.$item->url.'#comments" target="_blank">';
+											$html .= '<a href="https://golos.com'.$item->url.'#comments" target="_blank">';
 												$html .= '<i class="fa fa-comments"></i>&nbsp;';
 												$html .= '<span>'.sf_replies_count($item->author, $item->permlink).'</span>';
 											$html .= '</a>';
@@ -329,13 +329,13 @@ function sf_time_since($date)
 	$since = $now - $date;
 	
 	$chunks = array(
-		array(60 * 60 * 24 * 365 , __('year ago', 'steemit-feed'), __('years ago', 'steemit-feed')),
-		array(60 * 60 * 24 * 30 , __('month ago', 'steemit-feed'), __('months ago', 'steemit-feed')),
-		array(60 * 60 * 24 * 7, __('week ago', 'steemit-feed'), __('weeks ago', 'steemit-feed')),
-		array(60 * 60 * 24 , __('day ago', 'steemit-feed'), __('days ago', 'steemit-feed')),
-		array(60 * 60 , __('hour ago', 'steemit-feed'), __('hours ago', 'steemit-feed')),
-		array(60 , __('minute ago', 'steemit-feed'), __('minutes ago', 'steemit-feed')),
-		array(1 , __('second ago', 'steemit-feed'), __('seconds ago', 'steemit-feed'))
+		array(60 * 60 * 24 * 365 , __('year ago', 'golos-feed'), __('years ago', 'golos-feed')),
+		array(60 * 60 * 24 * 30 , __('month ago', 'golos-feed'), __('months ago', 'golos-feed')),
+		array(60 * 60 * 24 * 7, __('week ago', 'golos-feed'), __('weeks ago', 'golos-feed')),
+		array(60 * 60 * 24 , __('day ago', 'golos-feed'), __('days ago', 'golos-feed')),
+		array(60 * 60 , __('hour ago', 'golos-feed'), __('hours ago', 'golos-feed')),
+		array(60 , __('minute ago', 'golos-feed'), __('minutes ago', 'golos-feed')),
+		array(1 , __('second ago', 'golos-feed'), __('seconds ago', 'golos-feed'))
 	);
 
 	for ($i = 0, $j = count($chunks); $i < $j; $i++) {
@@ -383,53 +383,53 @@ function sf_replies_count($author, $permlink)
 add_filter('widget_text', 'do_shortcode');
 
 //Enqueue stylesheet
-add_action( 'wp_enqueue_scripts', 'mn_steemit_styles_enqueue' );
-function mn_steemit_styles_enqueue() {
-    wp_register_style( 'mn_steemit_styles', plugins_url('css/mn-steemit-style.css', __FILE__), array(), MNSFVER );
-    wp_enqueue_style( 'mn_steemit_styles' );
+add_action( 'wp_enqueue_scripts', 'mn_golos_styles_enqueue' );
+function mn_golos_styles_enqueue() {
+    wp_register_style( 'mn_golos_styles', plugins_url('css/mn-golos-style.css', __FILE__), array(), MNSFVER );
+    wp_enqueue_style( 'mn_golos_styles' );
 
-    $options = get_option('mn_steemit_settings');
-    if(isset($options['mn_steemit_disable_awesome'])){
-        if( !$options['mn_steemit_disable_awesome'] || !isset($options['mn_steemit_disable_awesome']) ) wp_enqueue_style( 'mn_steemit_icons', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', array(), '4.6.3' );
+    $options = get_option('mn_golos_settings');
+    if(isset($options['mn_golos_disable_awesome'])){
+        if( !$options['mn_golos_disable_awesome'] || !isset($options['mn_golos_disable_awesome']) ) wp_enqueue_style( 'mn_golos_icons', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', array(), '4.6.3' );
     }
     
 }
 
 //Enqueue scripts
-add_action( 'wp_enqueue_scripts', 'mn_steemit_scripts_enqueue' );
-function mn_steemit_scripts_enqueue() {
+add_action( 'wp_enqueue_scripts', 'mn_golos_scripts_enqueue' );
+function mn_golos_scripts_enqueue() {
     //Register the script to make it available
-    wp_register_script( 'mn_steemit_scripts', plugins_url( '/js/steem.min.js' , __FILE__ ), array('jquery'), MNSFVER, true );
+    wp_register_script( 'mn_golos_scripts', plugins_url( '/js/steem.min.js' , __FILE__ ), array('jquery'), MNSFVER, true );
 
     //Options to pass to JS file
-    $mn_steemit_settings = get_option('mn_steemit_settings');
+    $mn_golos_settings = get_option('mn_golos_settings');
 
-    isset($mn_steemit_settings[ 'mn_steemit_ajax_theme' ]) ? $mn_steemit_ajax_theme = trim($mn_steemit_settings['mn_steemit_ajax_theme']) : $mn_steemit_ajax_theme = '';
-    ( $mn_steemit_ajax_theme == 'on' || $mn_steemit_ajax_theme == 'true' || $mn_steemit_ajax_theme == true ) ? $mn_steemit_ajax_theme = true : $mn_steemit_ajax_theme = false;
+    isset($mn_golos_settings[ 'mn_golos_ajax_theme' ]) ? $mn_golos_ajax_theme = trim($mn_golos_settings['mn_golos_ajax_theme']) : $mn_golos_ajax_theme = '';
+    ( $mn_golos_ajax_theme == 'on' || $mn_golos_ajax_theme == 'true' || $mn_golos_ajax_theme == true ) ? $mn_golos_ajax_theme = true : $mn_golos_ajax_theme = false;
 
     //Enqueue it to load it onto the page
-    if( !$mn_steemit_ajax_theme ) wp_enqueue_script('mn_steemit_scripts');
+    if( !$mn_golos_ajax_theme ) wp_enqueue_script('mn_golos_scripts');
 
     //Pass option to JS file
-    wp_localize_script('mn_steemit_scripts', 'mn_steemit_js_options', $data);
+    wp_localize_script('mn_golos_scripts', 'mn_golos_js_options', $data);
 }
 
 //Run function on plugin activate
-function mn_steemit_activate() {
-    $options = get_option('mn_steemit_settings');
-    update_option( 'mn_steemit_settings', $options );
+function mn_golos_activate() {
+    $options = get_option('mn_golos_settings');
+    update_option( 'mn_golos_settings', $options );
 }
-register_activation_hook( __FILE__, 'mn_steemit_activate' );
+register_activation_hook( __FILE__, 'mn_golos_activate' );
 
 //Uninstall
-function mn_steemit_uninstall()
+function mn_golos_uninstall()
 {
     if ( ! current_user_can( 'activate_plugins' ) )
         return;
 
     //Settings
-    delete_option( 'mn_steemit_settings' );
+    delete_option( 'mn_golos_settings' );
 }
-register_uninstall_hook( __FILE__, 'mn_steemit_uninstall' );
+register_uninstall_hook( __FILE__, 'mn_golos_uninstall' );
 
 ?>
