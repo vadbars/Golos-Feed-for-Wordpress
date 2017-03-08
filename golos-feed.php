@@ -180,7 +180,7 @@ function mn_render_steem_feed() {
 								$image = $metadata->image;
 								if (array_key_exists('0', $image))
 								{
-									$html .= '<a href="https://golos.com'.$item->url.'" class="sf-image" target="_blank"><img src="https://img1.golos.com/128x256/'.$image[0].'" alt="'.$item->title.'" /></a>';
+									$html .= '<a href="https://golos.io'.$item->url.'" class="sf-image" target="_blank"><img src="https://img1.golos.io/128x256/'.$image[0].'" alt="'.$item->title.'" /></a>';
 								}
 							}
 						}
@@ -190,7 +190,7 @@ function mn_render_steem_feed() {
 							// Title
 							if ($atts['posttitle'] === 1 || $atts['posttitle'] === '1' || $atts['posttitle'] === true || $atts['posttitle'] === 'true')
 							{
-								$html .= '<a class="sf-li-title" href="https://golos.com'.$item->url.'" target="_blank">'.$item->title.'</a>';
+								$html .= '<a class="sf-li-title" href="https://golos.io'.$item->url.'" target="_blank">'.$item->title.'</a>';
 							}
 							
 							// Body
@@ -240,7 +240,7 @@ function mn_render_steem_feed() {
 											if ($atts['postauthor'] === 1 || $atts['postauthor'] === '1' || $atts['postauthor'] === true || $atts['postauthor'] === 'true')
 											{
 												$html .= '<span class="sf-li-author">'; 
-													$html .= ' '.__('by', 'golos-feed' ).' <a href="https://golos.com/@'.$item->author.'" target="_blank">'.$item->author.'</a>';
+													$html .= ' '.__('by', 'golos-feed' ).' <a href="https://golos.io/@'.$item->author.'" target="_blank">'.$item->author.'</a>';
 													//$html .= '<span class="sf-li-rep"></span>';
 												$html .= '</span>';
 											}
@@ -248,7 +248,7 @@ function mn_render_steem_feed() {
 											// Tags
 											if ($atts['posttag'] === 1 || $atts['posttag'] === '1' || $atts['posttag'] === true || $atts['posttag'] === 'true')
 											{
-												$html .= ' '.__('in', 'golos-feed' ).' <a href="https://golos.com/trending/'.$metadata->tags[0].'" target="_blank">'.$metadata->tags[0].'</a>';
+												$html .= ' '.__('in', 'golos-feed' ).' <a href="https://golos.io/trending/'.$metadata->tags[0].'" target="_blank">'.$metadata->tags[0].'</a>';
 											}
 										
 										$html .= '</span>';
@@ -267,7 +267,7 @@ function mn_render_steem_feed() {
 									if ($atts['postreplies'] === 1 || $atts['postreplies'] === '1' || $atts['postreplies'] === true || $atts['postreplies'] === 'true')
 									{
 										$html .= '<span class="sf-li-replies">';
-											$html .= '<a href="https://golos.com'.$item->url.'#comments" target="_blank">';
+											$html .= '<a href="https://golos.io'.$item->url.'#comments" target="_blank">';
 												$html .= '<i class="fa fa-comments"></i>&nbsp;';
 												$html .= '<span>'.sf_replies_count($item->author, $item->permlink).'</span>';
 											$html .= '</a>';
