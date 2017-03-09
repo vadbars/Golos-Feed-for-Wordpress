@@ -1,61 +1,61 @@
-=== Steemit Feed ===
-Contributors: minitekgr
-Tags: Steemit, Steemit feed, Steemit posts, Steemit articles, Steemit widget
+=== Golos Feed ===
+Contributors: minitekgr, vadbars
+Tags: Golos, Golos feed, Golos posts, Golos articles, Golos widget
 Requires at least: 4.6
-Tested up to: 4.6
-Stable tag: 1.0.1
+Tested up to: 4.7.3
+Stable tag: 1.0.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-A simple Wordpress plugin that displays a feed of your Steemit posts.
+A simple Wordpress plugin that displays a feed of your Golos posts.
 
 == Description ==
 
-Display Steemit posts from any Steemit username.
+Display Golos posts from any Golos username.
 
 == Installation ==
 
-1. Install the Steemit Feed plugin either via the WordPress plugin directory, or by uploading the files to your web server (in the `/wp-content/plugins/` directory).
-2. Activate the Steemit Feed plugin through the 'Plugins' menu in WordPress.
-3. Navigate to the 'Steemit Feed' settings page and configure your settings.
-4. Use the shortcode `[steemit-feed]` in your page, post or widget to display your Steemit posts.
-5. You can display multiple Steemit feeds by using shortcode options, for example: `[steemit-feed username="wordpress-tips" postscount="5"]`
+1. Install the Golos Feed plugin either via the WordPress plugin directory, or by uploading the files to your web server (in the `/wp-content/plugins/` directory).
+2. Activate the Golos Feed plugin through the 'Plugins' menu in WordPress.
+3. Navigate to the 'Golos Feed' settings page and configure your settings.
+4. Use the shortcode `[golos-feed]` in your page, post or widget to display your Golos posts.
+5. You can display multiple Golos feeds by using shortcode options, for example: `[golos-feed username="wordpress-tips" postscount="5"]`
 
 = Display your Feed =
 
-**Single Steemit Feed**
+**Single Golos Feed**
 
-Copy and paste the following shortcode directly into the page, post or widget where you'd like the Steemit feed to show up: `[steemit-feed]`
+Copy and paste the following shortcode directly into the page, post or widget where you'd like the Golos feed to show up: `[golos-feed]`
 
-**Multiple Steemit Feeds**
+**Multiple Golos Feeds**
 
-If you'd like to display multiple Steemit feeds then you can set different settings directly in the shortcode like so: `[steemit-feed username="wordpress-tips" postscount="5"]`
+If you'd like to display multiple Golos feeds then you can set different settings directly in the shortcode like so: `[golos-feed username="wordpress-tips" postscount="5"]`
 
-You can display as many different Steemit feeds as you like by just using the shortcode options below. For example:
-`[steemit-feed]`
-`[steemit-feed username="another_username"]`
-`[steemit-feed username="another_username" postscount="5" postimage="false" postreward="false"]`
+You can display as many different Golos feeds as you like by just using the shortcode options below. For example:
+`[golos-feed]`
+`[golos-feed username="another_username"]`
+`[golos-feed username="another_username" postscount="5" postimage="false" postreward="false"]`
 
 See the table below for a full list of available shortcode options:
 
 = Shortcode Options =
 * **General Options**
-* **username** - A Steemit Username - Example: `[steemit-feed username="wordpress-tips"]`
+* **username** - A Golos Username - Example: `[golos-feed username="wordpress-tips"]`
 *
 * **Post Options**
-* **postscount** - Total posts in feed (integer) - Example: `[steemit-feed postscount="5"]`
-* **postimage** - Show post image (true or false) - Example: `[steemit-feed postimage="true"]`
-* **posttitle** - Show post title (true or false) - Example: `[steemit-feed posttitle="true"]`
-* **postcontent** - Show post content (true or false) - Example: `[steemit-feed postcontent="false"]`
-* **wordlimit** - Word limit for post content (integer) - Example: `[steemit-feed wordlimit="20"]`
-* **postreward** - Show post reward (true or false) - Example: `[steemit-feed postreward="false"]`
-* **postdate** - Sort post date (true or false) - Example: `[steemit-feed postdate="true"]`
-* **postauthor** - Show post author (true or false) - Example: `[steemit-feed postauthor="false"]`
-* **posttag** - Show post tag (true or false) - Example: `[steemit-feed posttag="true"]`
-* **postvotes** - Show post votes (true or false) - Example: `[steemit-feed postvotes="false"]`
-* **postreplies** - Show post replies (true or false) - Example: `[steemit-feed postreplies="true"]`
+* **postscount** - Total posts in feed (integer) - Example: `[golos-feed postscount="5"]`
+* **postimage** - Show post image (true or false) - Example: `[golos-feed postimage="true"]`
+* **posttitle** - Show post title (true or false) - Example: `[golos-feed posttitle="true"]`
+* **postcontent** - Show post content (true or false) - Example: `[golos-feed postcontent="false"]`
+* **wordlimit** - Word limit for post content (integer) - Example: `[golos-feed wordlimit="20"]`
+* **postreward** - Show post reward (true or false) - Example: `[golos-feed postreward="false"]`
+* **postdate** - Sort post date (true or false) - Example: `[golos-feed postdate="true"]`
+* **postauthor** - Show post author (true or false) - Example: `[golos-feed postauthor="false"]`
+* **posttag** - Show post tag (true or false) - Example: `[golos-feed posttag="true"]`
+* **postvotes** - Show post votes (true or false) - Example: `[golos-feed postvotes="false"]`
+* **postreplies** - Show post replies (true or false) - Example: `[golos-feed postreplies="true"]`
 
 == Changelog ==
 
-= 1.0.1 =
-* Launched the Steemit Feed plugin.
+= 1.0.0 =
+* Launched the Golos Feed plugin.
