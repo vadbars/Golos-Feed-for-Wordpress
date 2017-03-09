@@ -3,8 +3,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 function mn_golos_menu() {
     add_menu_page(
-        'golos Feed',
-        'golos Feed',
+        'Golos Feed',
+        'Golos Feed',
         'manage_options',
         'mn-golos-feed',
         'mn_golos_settings_page'
@@ -127,7 +127,7 @@ function mn_golos_settings_page() {
     <div id="sfi_admin" class="wrap">
 
         <div id="header">
-            <h1><?php _e('golos Feed', 'golos-feed'); ?></h1>
+            <h1><?php _e('Golos Feed', 'golos-feed'); ?></h1>
         </div>
     
         <form name="form1" method="post" action="">
@@ -325,7 +325,7 @@ function mn_golos_settings_page() {
 
         <h3 style="padding-top: 10px;"><?php _e( 'Multiple Feeds', 'golos-feed' ); ?></h3>
         <p><?php _e("If you'd like to display multiple feeds then you can set different settings directly in the shortcode like so:", 'golos-feed'); ?>
-        <code>[golos-feed username="wordpress-tips" postimage="false"]</code></p>
+        <code>[golos-feed username="vadbars" postimage="false"]</code></p>
         <p>You can display as many different feeds as you like, on either the same page or on different pages, by just using the shortcode options below. For example:<br />
         <code>[golos-feed]</code><br />
         <code>[golos-feed username="username"]</code><br />
@@ -344,7 +344,7 @@ function mn_golos_settings_page() {
                 <tr class="sfi_table_header"><td colspan=3><?php _e("General Settings", 'golos-feed'); ?></td></tr>
                 <tr>
                     <td>username</td>
-                    <td><?php _e('A golos username.', 'golos-feed'); ?></td>
+                    <td><?php _e('A Golos username.', 'golos-feed'); ?></td>
                     <td><code>[golos-feed username="wordpress-tips"]</code></td>
                 </tr>
 
@@ -420,8 +420,8 @@ function mn_golos_settings_page() {
 	
     <hr />
 
-    <p class="sfi_plugins_promo dashicons-before dashicons-admin-plugins"> Check Golos Feeed for Wordpress at <a href="https://vadbars.ru/" target="_blank">https://www.minitek.gr/</a>.</p>
-    <p class="sfi_plugins_promo dashicons-before dashicons-admin-plugins"> Check Steem Feeed for Wordpress at <a href="https://www.minitek.gr/" target="_blank">https://www.minitek.gr/</a>.</p>
+    <p class="sfi_plugins_promo dashicons-before dashicons-admin-plugins"> Check Golos Feeed for Wordpress plugin at <a href="https://vadbars.ru/" target="_blank">https://vadbars.ru/</a>.</p>
+    <p class="sfi_plugins_promo dashicons-before dashicons-admin-plugins"> Check Steem Feeed for Wordpress plugin at <a href="https://www.minitek.gr/" target="_blank">https://www.minitek.gr/</a>.</p>
 
     <div class="sfi_share_plugin">
         <h3><?php _e('Like the plugin? Help spread the word!'); ?></h3>
