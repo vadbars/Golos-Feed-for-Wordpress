@@ -2,7 +2,7 @@
 /*
 Plugin Name: Golos Feed
 Description: A simple Wordpress plugin that displays a feed of your Golos posts.
-Version: 0.1
+Version: 1.0.0
 Author: Vadbars
 Author URI: https://vadbars.ru/
 License: GPLv3 or later
