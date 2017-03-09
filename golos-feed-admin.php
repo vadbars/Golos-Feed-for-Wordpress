@@ -150,7 +150,7 @@ function mn_golos_settings_page() {
                     <h3><?php _e('General', 'golos-feed'); ?></h3>
                     
                     <tr valign="top">
-                        <th scope="row"><label><?php _e('golos Username:', 'golos-feed'); ?></label></th>
+                        <th scope="row"><label><?php _e('Golos Username:', 'golos-feed'); ?></label></th>
                         <td>
                             <span>
                                 <?php $mn_golos_type = 'user'; ?>
