@@ -2,7 +2,7 @@
 
 Простой плагин для Wordpress, который выводит список постов в соцсети Голос (https://golos.io) - русскоязычной социально-медийной платформе, основанной на блокчейне.
 
-Информация на Голосе: https://golos.io/wordpress/@vadbars/
+Информация на Голосе: https://golos.io/wordpress/@vadbars/wordpress-plagin-dlya-spiska-postov-golosa
 
 Пример работы плагина: https://vadbars.ru/golos-feed-for-wordpress-plugin/
 
