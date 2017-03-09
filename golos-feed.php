@@ -179,7 +179,7 @@ function mn_render_steem_feed() {
 								$image = $metadata->image;
 								if (array_key_exists('0', $image))
 								{
-									$html .= '<a href="https://golos.io'.$item->url.'" class="sf-image" target="_blank"><img src="https://imgp.golos.io/128x256/'.$image[0].'" alt="'.$item->title.'" /></a>';
+									$html .= '<a href="https://golos.io'.$item->url.'" class="sf-image" target="_blank"><img src="https://imgp.golos.io/256x128/'.$image[0].'" alt="'.$item->title.'" /></a>';
 								}
 							}
 						}
