@@ -5,6 +5,7 @@ Russian
 
 Основан на коде плагина Steemit-Feed-for-Wordpress https://github.com/minitek/Steemit-Feed-for-Wordpress
 
+============================
 
 English
 
