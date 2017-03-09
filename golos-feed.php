@@ -1,7 +1,6 @@
 <?php 
 /*
 Plugin Name: Golos Feed
-#Plugin URI: https://golos.com/golos/@wordpress-tips/golos-for-wordpress-1-display-your-golos-blog-in-your-wordpress-website-with-this-free-plugin
 Description: A simple Wordpress plugin that displays a feed of your Golos posts.
 Version: 0.1
 Author: Vadbars
@@ -9,7 +8,7 @@ Author URI: https://vadbars.ru/
 License: GPLv3 or later
 Text Domain: golos-feed
 
-Copyright 2017  vadbars.
+Copyright 2017 vadbars.
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 3 of the License, or
@@ -78,7 +77,7 @@ function display_golos($atts, $content = null) {
     //Error messages
     $mn_golos_error = false;
     if( empty($mn_golos_username) || !isset($mn_golos_username) ){
-        $mn_golos_content .= '<div class="mn_steem_feed_error"><p>'.__('Please enter a username on the golos Feed plugin Settings page', 'golos-feed' ).'</p></div>';
+        $mn_golos_content .= '<div class="mn_steem_feed_error"><p>'.__('Please enter a username on the Golos Feed plugin Settings page', 'golos-feed' ).'</p></div>';
         $mn_golos_error = true;
     }
     
@@ -86,7 +85,7 @@ function display_golos($atts, $content = null) {
 	 	
 	 //If using an ajax theme then add the JS to the bottom of the feed
     if($mn_golos_ajax_theme){
-        $mn_golos_content .= "<script type='text/javascript' src='".plugins_url( '/js/steem.min.js?ver='.MNSFVER , __FILE__ )."'></script>";
+        $mn_golos_content .= "<script type='text/javascript' src='".plugins_url( '/js/golos.min.js?ver='.MNSFVER , __FILE__ )."'></script>";
     }
 	
 	// Add script
@@ -180,7 +179,7 @@ function mn_render_steem_feed() {
 								$image = $metadata->image;
 								if (array_key_exists('0', $image))
 								{
-									$html .= '<a href="https://golos.io'.$item->url.'" class="sf-image" target="_blank"><img src="https://img1.golos.io/128x256/'.$image[0].'" alt="'.$item->title.'" /></a>';
+									$html .= '<a href="https://golos.io'.$item->url.'" class="sf-image" target="_blank"><img src="https://imgp.golos.io/128x256/'.$image[0].'" alt="'.$item->title.'" /></a>';
 								}
 							}
 						}
@@ -399,7 +398,7 @@ function mn_golos_styles_enqueue() {
 add_action( 'wp_enqueue_scripts', 'mn_golos_scripts_enqueue' );
 function mn_golos_scripts_enqueue() {
     //Register the script to make it available
-    wp_register_script( 'mn_golos_scripts', plugins_url( '/js/steem.min.js' , __FILE__ ), array('jquery'), MNSFVER, true );
+    wp_register_script( 'mn_golos_scripts', plugins_url( '/js/golos.min.js' , __FILE__ ), array('jquery'), MNSFVER, true );
 
     //Options to pass to JS file
     $mn_golos_settings = get_option('mn_golos_settings');
