@@ -414,20 +414,20 @@ function mn_golos_settings_page() {
     <?php if( $sfi_active_tab == 'support' ) { //Start Support tab ?>
 
         <h3><?php _e('Setting up and Customizing the plugin', 'golos-feed'); ?></h3>
-        <p><i class="fa fa-life-ring" aria-hidden="true"></i>&nbsp; <?php _e('<a href="https://golos.io/golos/@vadbars/golos-for-wordpress-1-display-your-golos-blog-in-your-wordpress-website-with-this-free-plugin" target="_blank">Click here for setup instructions</a>', 'golos-feed'); ?></p>
+        <p><i class="fa fa-life-ring" aria-hidden="true"></i>&nbsp; <?php _e('<a href="https://golos.io/wordpress/@vadbars/wordpress-plagin-dlya-spiska-postov-golosa" target="_blank">Click here for setup instructions</a>', 'golos-feed'); ?></p>
         
 	<?php } //End Support tab ?>
 	
     <hr />
 
-    <p class="sfi_plugins_promo dashicons-before dashicons-admin-plugins"> Check Golos Feeed for Wordpress plugin at <a href="https://vadbars.ru/" target="_blank">https://vadbars.ru/</a>.</p>
-    <p class="sfi_plugins_promo dashicons-before dashicons-admin-plugins"> Check Steem Feeed for Wordpress plugin at <a href="https://www.minitek.gr/" target="_blank">https://www.minitek.gr/</a>.</p>
+    <p class="sfi_plugins_promo dashicons-before dashicons-admin-plugins"> Check Golos Feeed for Wordpress plugin at <a href="https://github.com/vadbars/golos-feed-for-wordpress" target="_blank">GitHub</a>.</p>
+    <p class="sfi_plugins_promo dashicons-before dashicons-admin-plugins"> Check also Steem Feeed for Wordpress plugin at <a href="https://www.minitek.gr/" target="_blank">https://www.minitek.gr/</a>.</p>
 
     <div class="sfi_share_plugin">
         <h3><?php _e('Like the plugin? Help spread the word!'); ?></h3>
 
         <!-- TWITTER -->
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://golos.io/golos/@vadbars/golos-for-wordpress-1-display-your-golos-blog-in-your-wordpress-website-with-this-free-plugin" data-text="A simple Wordpress plugin that displays a feed of your Golos posts." data-via="Minitek_gr" data-dnt="true">Tweet</a>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://golos.io/wordpress/@vadbars/wordpress-plagin-dlya-spiska-postov-golosa" data-text="A simple Wordpress plugin that displays a feed of your Golos posts." data-via="Vadbars" data-dnt="true">Tweet</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         <style type="text/css">
         #twitter-widget-0{ float: left; width: 100px !important; }
@@ -443,7 +443,7 @@ function mn_golos_settings_page() {
           js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1684364011793192&version=v2.7";
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
-        <div class="fb-like" data-href="https://golos.io/golos/@vadbars/golos-for-wordpress-1-display-your-golos-blog-in-your-wordpress-website-with-this-free-plugin" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true" style="display: block; float: left; margin-right: 20px;"></div>
+        <div class="fb-like" data-href="https://golos.io/wordpress/@vadbars/wordpress-plagin-dlya-spiska-postov-golosa" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true" style="display: block; float: left; margin-right: 20px;"></div>
 
     </div>
 
